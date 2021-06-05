@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>About Yall Website</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+<link rel="stylesheet" href="watermark-css.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="materi.html">Program</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">About Yall Website</h1>
+
+</div>
+
+
+<p>Dengan ini kita bisa belajar tengtang menambahkan watermark pada halaman web dan pada gambar di RStudio RMarkdown. <br> Terimakasih sudah berkunjung :) <br> Semoga Bermanfaat</p>
+<div id="tentang-penulis" class="section level1">
+<h1>Tentang penulis</h1>
+<p>Saya, Firyal Nabila Zalfa <br> Mahasiswi Teknik Informatika <br> UIN Maulana Malik Ibrahim Malang</p>
+<p><img src="data:image/jpeg;base64,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" /></p>
+</div>
+<div id="ucapan-terimakasih" class="section level1">
+<h1>Ucapan terimakasih</h1>
+<p>Saya ucapkan terimakasih kepada dosen pengampu atas bimbingannya. <br> Prof. Dr. Suhartono, M.Kom</p>
+<p><img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-1/p200x200/101692139_10216992420151979_6304736812904231421_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=7206a8&amp;_nc_eui2=AeFl2WNlCq3OiACD95FVhmQt_J9br-SWDTP8n1uv5JYNM7pi7RJh3o4pEVHcnUUxtoCoHZPu_IaBCprwe8tt4EVt&amp;_nc_ohc=NCxSKpNEaDoAX_1_Dwf&amp;_nc_ht=scontent-sin6-1.xx&amp;tp=6&amp;oh=ffa0a6bff5dc3fa7ac682a506dd89842&amp;oe=60DF4DEE" /></p>
+<dic class="watermark"><img src="https://pbs.twimg.com/profile_images/513907821113389056/zU9lKbuT_400x400.jpeg">
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
